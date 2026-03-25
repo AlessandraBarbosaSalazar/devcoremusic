@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1db954">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DevCore Music">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>DevCore Music</title>
+</head>
+<body>
+
+  <div class="bg-blur" id="bgBlur"></div>
+
+  <div class="player">
+
+    <div class="cover-wrapper">
+      <img id="cover" src="covers/cover1.jpg" alt="Portada">
+    </div>
+
+    <div class="song-info">
+      <h2 id="title">Canción 1</h2>
+      <p id="artist">Artista</p>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <div class="progress-wrapper">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progress" value="0" min="0" max="100">
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="controls">
+      <button class="btn-icon" onclick="toggleShuffle()" id="shuffleBtn">🔀</button>
+      <button class="btn-icon" onclick="prev()">⏮</button>
+      <button class="btn-play" onclick="playPause()" id="playBtn">▶️</button>
+      <button class="btn-icon" onclick="next()">⏭</button>
+      <button class="btn-icon" onclick="toggleRepeat()" id="repeatBtn">🔁</button>
+    </div>
+
+    <div class="volume-wrapper">
+      <span>🔈</span>
+      <input type="range" id="volume" min="0" max="100" value="80">
+      <span>🔊</span>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

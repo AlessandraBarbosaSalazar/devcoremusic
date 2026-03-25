@@ -112,3 +112,10 @@ if ("serviceWorker" in navigator) {
 }
 
 loadSong(index);
+
+
+navigator.mediaSession.metadata = new MediaMetadata({
+  title: song.title,
+  artist: song.artist,
+  artwork: [{ src: song.cover, sizes: "512x512", type: "image/jpeg" }]
+});
